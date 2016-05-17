@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///webpack:///assets/styles/assets/styles/main.scss"],"names":[],"mappings":"AACA;EACE,yBAAyB,EAC1B","file":"./assets/dist/main.css","sourcesContent":["\nbody {\n  background-color: yellow;\n}\n\n\n\n/** WEBPACK FOOTER **\n ** webpack:///assets/styles/assets/styles/main.scss\n **/"],"sourceRoot":""}
