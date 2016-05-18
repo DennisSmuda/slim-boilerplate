@@ -26,6 +26,7 @@
     "animsition": "^4.0.2",
     "bourbon": "^4.2.7",
     "bourbon-neat": "^1.7.4",
+    "flexibility": "^1.0.5",
     "jquery": "^2.2.3",
     "sass-mediaqueries": "^1.6.1"
   }

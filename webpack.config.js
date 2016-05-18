@@ -10,7 +10,7 @@ module.exports = {
   },
   entry: ['./assets/js/index.js', './assets/styles/main.scss'],
   output: {
-    filename: './assets/dist/browser-bundle.js'
+    filename: './public/assets/dist/browser-bundle.js'
   },
   devtool: 'source-map',
   module: {
@@ -30,6 +30,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("./assets/dist/main.css")
+    new ExtractTextPlugin("./public/assets/dist/main.css")
   ]
 };

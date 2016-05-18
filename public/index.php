@@ -23,28 +23,29 @@ require __DIR__ . '/../src/dependencies.php';
 require __DIR__ . '/../src/middleware.php';
 
 // Twig Container for Application
-$container['view'] = function ($c) {
+$container['view'] = function ($container) {
     $view = new \Slim\Views\Twig('./templates/', [
         'cache' => false
     ]);
-
-    // Instantiate and add Slim specific extension
-    $basePath = rtrim(str_ireplace('index.php', '', $c['request']->getUri()->getBasePath()), '/');
-    $view->addExtension(new Slim\Views\TwigExtension($c['router'], $basePath));
+    $view->addExtension(new \Slim\Views\TwigExtension(
+        $container['router'],
+        $container['request']->getUri()
+    ));
 
     return $view;
 };
+
 
 $app->get('/', function($request, $response, $args) {
   return $this->view->render($response, 'index.twig');
 });
 
-// Define named route
-$app->get('/hello/{name}', function ($request, $response, $args) {
-    return $this->view->render($response, 'profile.html', [
-        'name' => $args['name']
-    ]);
-})->setName('profile');
+$app->get('/somepage', function($request, $response, $args) {
+  return $this->view->render($response, 'somepage.twig');
+});
+
+
+
 
 // Run app
 $app->run();

@@ -55,6 +55,8 @@
 	'use strict';
 	
 	console.log('hallo');
+	
+	console.log('tESTSTSK.J');
 
 /***/ },
 /* 2 */
